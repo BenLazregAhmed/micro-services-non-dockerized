@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id : r1
+          uri: http://localhost:8090/
+          predicates:
+            - Path=/customers/**
+        - id: r2
+          uri: http://localhost:8085/
+          predicates:
+            - Path=/accounts/**
+  application:
+    name: gateway-service
+server:
+  port: 8888
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
