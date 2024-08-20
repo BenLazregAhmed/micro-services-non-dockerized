@@ -12,9 +12,9 @@ import java.util.Map;
 @RestController
 @RefreshScope
 public class ConfigTestController {
-    @Value("${global.pram.a}")
-    private int p1;
-    @Value("${global.pram.b}")
+//    @Value("${global.pram.a}")
+//    private int p1;
+//    @Value("${global.pram.b}")
 
     private int p2;
 //    @Value("${global.pram.x}")
@@ -31,9 +31,9 @@ public class ConfigTestController {
     {
         return globalConfig;
     }
-    @GetMapping(path = "/config/test")
-    public Map<String ,Integer>configTest()
-    {
-        return Map.of("p1",p1,"p2",p2);
-    }
+//    @GetMapping(path = "/config/test")
+//    public Map<String ,Integer>configTest()
+//    {
+//        return Map.of("p1",p1,"p2",p2);
+//    }
 }
