@@ -1,0 +1,8 @@
+services:
+  bank-account-discovery-service:
+    build: ./discovery-service
+    container_name: bank-account-discovery-service
+    ports:
+      - '8761:8671'
+    expose:
+      - '8761'
